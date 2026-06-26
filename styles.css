@@ -279,12 +279,16 @@ body {
 
 .hero-image {
     z-index: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 400px;
 }
 
-.hero-placeholder {
-    font-size: 120px;
-    text-align: center;
-    opacity: 0.8;
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 /* Server Status */
@@ -406,25 +410,11 @@ body {
 .server-image {
     position: absolute;
     inset: 0;
-    background-size: cover;
-    background-position: center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     transition: transform 0.3s ease;
-}
-
-.server-image.anime {
-    background: linear-gradient(135deg, rgba(236, 72, 153, 0.3), rgba(124, 58, 237, 0.3));
-}
-
-.server-image.ninja {
-    background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(124, 58, 237, 0.3));
-}
-
-.server-image.city {
-    background: linear-gradient(135deg, rgba(14, 165, 233, 0.3), rgba(124, 58, 237, 0.3));
-}
-
-.server-image.demon {
-    background: linear-gradient(135deg, rgba(244, 63, 94, 0.3), rgba(124, 58, 237, 0.3));
+    display: block;
 }
 
 .server-card:hover .server-image {
